@@ -1,0 +1,15 @@
+$(document).ready(function(){
+	$('.menuitem').mouseenter(
+		function(){
+			$(this).children('.submenu').removeClass('hide_submenu').addClass('show_submenu').show();
+		}
+	)
+	$('.menuitem').mouseleave(
+		function(){
+			$(this).children('.submenu').removeClass('show_submenu').addClass('hide_submenu').fadeOut(400);
+		}
+	)
+	$('.submenu').mouseleave(function(){
+		$(this).removeClass('show_submenu').addClass('hide_submenu').fadeOut(400);
+	})
+})
